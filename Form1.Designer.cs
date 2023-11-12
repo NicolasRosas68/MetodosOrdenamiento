@@ -285,7 +285,7 @@
             this.gbElementos.Controls.Add(this.lblLongitud);
             this.gbElementos.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbElementos.ForeColor = System.Drawing.Color.SteelBlue;
-            this.gbElementos.Location = new System.Drawing.Point(20, 45);
+            this.gbElementos.Location = new System.Drawing.Point(20, 22);
             this.gbElementos.Name = "gbElementos";
             this.gbElementos.Size = new System.Drawing.Size(346, 126);
             this.gbElementos.TabIndex = 16;

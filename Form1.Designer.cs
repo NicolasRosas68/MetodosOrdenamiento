@@ -55,16 +55,19 @@
             this.optBubble = new System.Windows.Forms.RadioButton();
             this.gbElementos = new System.Windows.Forms.GroupBox();
             this.btnGenerar = new System.Windows.Forms.Button();
-            this.txtVector = new System.Windows.Forms.TextBox();
             this.lblLongitud = new System.Windows.Forms.Label();
             this.grDesordenado = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.grOrdenado = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMetodos)).BeginInit();
             this.gbResultados.SuspendLayout();
             this.gbMetodo.SuspendLayout();
             this.gbElementos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grDesordenado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grOrdenado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblGraficoOrdenado
@@ -164,7 +167,7 @@
             this.gbResultados.Controls.Add(this.txtTiempo);
             this.gbResultados.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbResultados.ForeColor = System.Drawing.Color.SteelBlue;
-            this.gbResultados.Location = new System.Drawing.Point(20, 410);
+            this.gbResultados.Location = new System.Drawing.Point(20, 350);
             this.gbResultados.Name = "gbResultados";
             this.gbResultados.Size = new System.Drawing.Size(346, 121);
             this.gbResultados.TabIndex = 18;
@@ -219,7 +222,7 @@
             this.gbMetodo.Controls.Add(this.optBubble);
             this.gbMetodo.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbMetodo.ForeColor = System.Drawing.Color.SteelBlue;
-            this.gbMetodo.Location = new System.Drawing.Point(20, 223);
+            this.gbMetodo.Location = new System.Drawing.Point(20, 175);
             this.gbMetodo.Name = "gbMetodo";
             this.gbMetodo.Size = new System.Drawing.Size(346, 152);
             this.gbMetodo.TabIndex = 17;
@@ -280,8 +283,8 @@
             // 
             // gbElementos
             // 
+            this.gbElementos.Controls.Add(this.numericUpDown1);
             this.gbElementos.Controls.Add(this.btnGenerar);
-            this.gbElementos.Controls.Add(this.txtVector);
             this.gbElementos.Controls.Add(this.lblLongitud);
             this.gbElementos.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbElementos.ForeColor = System.Drawing.Color.SteelBlue;
@@ -305,20 +308,12 @@
             this.btnGenerar.UseVisualStyleBackColor = false;
             this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
-            // txtVector
-            // 
-            this.txtVector.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVector.Location = new System.Drawing.Point(16, 70);
-            this.txtVector.Name = "txtVector";
-            this.txtVector.Size = new System.Drawing.Size(152, 22);
-            this.txtVector.TabIndex = 3;
-            // 
             // lblLongitud
             // 
             this.lblLongitud.AutoSize = true;
             this.lblLongitud.Font = new System.Drawing.Font("Franklin Gothic Medium", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLongitud.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblLongitud.Location = new System.Drawing.Point(13, 50);
+            this.lblLongitud.Location = new System.Drawing.Point(13, 35);
             this.lblLongitud.Name = "lblLongitud";
             this.lblLongitud.Size = new System.Drawing.Size(111, 17);
             this.lblLongitud.TabIndex = 3;
@@ -356,12 +351,40 @@
             this.grOrdenado.TabIndex = 23;
             this.grOrdenado.Text = "chart2";
             // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(16, 58);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 25);
+            this.numericUpDown1.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(125, 501);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "limpiar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(17, 504);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 16);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "limpiar grilla";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1623, 597);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.grOrdenado);
             this.Controls.Add(this.grDesordenado);
             this.Controls.Add(this.lblGraficoOrdenado);
@@ -370,6 +393,8 @@
             this.Controls.Add(this.gbResultados);
             this.Controls.Add(this.gbMetodo);
             this.Controls.Add(this.gbElementos);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -382,6 +407,7 @@
             this.gbElementos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grDesordenado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grOrdenado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -404,7 +430,6 @@
         private System.Windows.Forms.RadioButton optBubble;
         private System.Windows.Forms.GroupBox gbElementos;
         private System.Windows.Forms.Button btnGenerar;
-        private System.Windows.Forms.TextBox txtVector;
         private System.Windows.Forms.Label lblLongitud;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Iteraciones1;
@@ -412,6 +437,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Elementos;
         private System.Windows.Forms.DataVisualization.Charting.Chart grDesordenado;
         private System.Windows.Forms.DataVisualization.Charting.Chart grOrdenado;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

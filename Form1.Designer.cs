@@ -54,20 +54,20 @@
             this.optQuick = new System.Windows.Forms.RadioButton();
             this.optBubble = new System.Windows.Forms.RadioButton();
             this.gbElementos = new System.Windows.Forms.GroupBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.btnGenerar = new System.Windows.Forms.Button();
             this.lblLongitud = new System.Windows.Forms.Label();
             this.grDesordenado = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.grOrdenado = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMetodos)).BeginInit();
             this.gbResultados.SuspendLayout();
             this.gbMetodo.SuspendLayout();
             this.gbElementos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grDesordenado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grOrdenado)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblGraficoOrdenado
@@ -295,6 +295,18 @@
             this.gbElementos.TabStop = false;
             this.gbElementos.Text = "Defina Cantidad de elementos";
             // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(16, 58);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 25);
+            this.numericUpDown1.TabIndex = 4;
+            // 
             // btnGenerar
             // 
             this.btnGenerar.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -351,13 +363,6 @@
             this.grOrdenado.TabIndex = 23;
             this.grOrdenado.Text = "chart2";
             // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(16, 58);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 25);
-            this.numericUpDown1.TabIndex = 4;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(125, 501);
@@ -405,9 +410,9 @@
             this.gbMetodo.PerformLayout();
             this.gbElementos.ResumeLayout(false);
             this.gbElementos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grDesordenado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grOrdenado)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

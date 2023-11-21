@@ -26,8 +26,8 @@ namespace MetodosOrdenamiento
         public int aux;
         public string cargando = "";
         int iteraciones = 0;
-        
         List<int> sortedArr = new List<int>();
+
                                                // GENERAR VECTOR CON NUMEROS RANDOM//
         private void btnGenerar_Click(object sender, EventArgs e)
         {
@@ -49,7 +49,37 @@ namespace MetodosOrdenamiento
                 MessageBox.Show("Ingresar un numero de elementos positivos", "Error");
             }
         }
-                                          // FUNCIONES DE METODO QUICK SORT//
+        // FUNCION METODO BURBUJA//
+
+
+        private void Bubblesort(List<int> arr, out int iteraciones, out double tiempo)
+        {
+            iteraciones = 0;
+            Stopwatch time = new Stopwatch();
+            time.Start();
+
+            int n = arr.Count;
+            for (int i = 0; i < n - 1; i++)
+            {
+                for (int j = 0; j < n - i - 1; j++)
+                {
+                    iteraciones++;
+                    if (arr[j] > arr[j + 1])
+                    {
+                        // Intercambiar elementos si están en el orden incorrecto
+                        int temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+
+            time.Stop();
+            tiempo = time.Elapsed.TotalMilliseconds;
+           
+        }
+
+        // FUNCIONES DE METODO QUICK SORT//
         private void Quick(List<int> arr, int left, int right, out int iteraciones, out double tiempo)
         {
             iteraciones = 0;
@@ -159,34 +189,20 @@ namespace MetodosOrdenamiento
             }
 
         }
-                                             // LLAMADO DE FUNCIONES Y METODO BURBUJA//
+                                             // LLAMADO DE FUNCIONES//
 
         private void btnOrdenar_Click(object sender, EventArgs e)
         {
-            int iteraciones = 0;
+          
             if (optBubble.Checked == true && numericUpDown1.Value >= 1)
             {
-                Stopwatch time = new Stopwatch();
-                time.Start();
-                for (int i = 0; i < numeros.Count; i++)
-                {
-                    iteraciones++;
-                    for (int J = 0; J < numeros.Count - 1 - i; J++)
-                    {
-                        if (numeros[J] > numeros[J + 1])
-                        {
-                            aux = numeros[J];
-                            numeros[J] = numeros[J + 1];
-                            numeros[J + 1] = aux;
-
-                        }
-                        iteraciones++;
-                    }
-                }
-                time.Stop();
-                dgvMetodos.Rows.Add("Bubble Sort", iteraciones, time.Elapsed.TotalMilliseconds, numericUpDown1.Value);
+                iteraciones = 0;
+                double time = 0;
+                Bubblesort(numeros, out iteraciones, out time);
+               
+                dgvMetodos.Rows.Add("Bubble Sort", iteraciones, time, numericUpDown1.Value);
                 txtIteraciones.Text = iteraciones.ToString();
-                txtTiempo.Text = time.Elapsed.TotalMilliseconds.ToString();
+                txtTiempo.Text = time.ToString();
                 iteraciones = 0;
 
             }

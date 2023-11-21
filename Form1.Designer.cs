@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.lblGraficoOrdenado = new System.Windows.Forms.Label();
             this.lblGraficoDesordenado = new System.Windows.Forms.Label();
             this.dgvMetodos = new System.Windows.Forms.DataGridView();
@@ -60,7 +60,10 @@
             this.grDesordenado = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.grOrdenado = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.button1 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMetodos)).BeginInit();
             this.gbResultados.SuspendLayout();
             this.gbMetodo.SuspendLayout();
@@ -68,6 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grDesordenado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grOrdenado)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblGraficoOrdenado
@@ -97,35 +101,36 @@
             this.dgvMetodos.AllowUserToAddRows = false;
             this.dgvMetodos.AllowUserToDeleteRows = false;
             this.dgvMetodos.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMetodos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMetodos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvMetodos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMetodos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
             this.Iteraciones1,
             this.Tiempo,
             this.Elementos});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMetodos.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvMetodos.Location = new System.Drawing.Point(395, 22);
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMetodos.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvMetodos.Location = new System.Drawing.Point(378, 22);
             this.dgvMetodos.Name = "dgvMetodos";
             this.dgvMetodos.ReadOnly = true;
             this.dgvMetodos.RowHeadersWidth = 51;
             this.dgvMetodos.RowTemplate.Height = 24;
             this.dgvMetodos.Size = new System.Drawing.Size(611, 542);
             this.dgvMetodos.TabIndex = 19;
+            this.dgvMetodos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMetodos_CellContentClick);
             // 
             // Nombre
             // 
@@ -167,7 +172,7 @@
             this.gbResultados.Controls.Add(this.txtTiempo);
             this.gbResultados.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbResultados.ForeColor = System.Drawing.Color.SteelBlue;
-            this.gbResultados.Location = new System.Drawing.Point(20, 350);
+            this.gbResultados.Location = new System.Drawing.Point(20, 333);
             this.gbResultados.Name = "gbResultados";
             this.gbResultados.Size = new System.Drawing.Size(346, 121);
             this.gbResultados.TabIndex = 18;
@@ -333,39 +338,39 @@
             // 
             // grDesordenado
             // 
-            chartArea1.Name = "ChartArea1";
-            this.grDesordenado.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.grDesordenado.Legends.Add(legend1);
+            chartArea7.Name = "ChartArea1";
+            this.grDesordenado.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend1";
+            this.grDesordenado.Legends.Add(legend7);
             this.grDesordenado.Location = new System.Drawing.Point(1045, 45);
             this.grDesordenado.Name = "grDesordenado";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.grDesordenado.Series.Add(series1);
+            series7.ChartArea = "ChartArea1";
+            series7.Legend = "Legend1";
+            series7.Name = "Series1";
+            this.grDesordenado.Series.Add(series7);
             this.grDesordenado.Size = new System.Drawing.Size(547, 247);
             this.grDesordenado.TabIndex = 22;
             this.grDesordenado.Text = "Elementos";
             // 
             // grOrdenado
             // 
-            chartArea2.Name = "ChartArea1";
-            this.grOrdenado.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.grOrdenado.Legends.Add(legend2);
+            chartArea8.Name = "ChartArea1";
+            this.grOrdenado.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            this.grOrdenado.Legends.Add(legend8);
             this.grOrdenado.Location = new System.Drawing.Point(1045, 330);
             this.grOrdenado.Name = "grOrdenado";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.grOrdenado.Series.Add(series2);
+            series8.ChartArea = "ChartArea1";
+            series8.Legend = "Legend1";
+            series8.Name = "Series1";
+            this.grOrdenado.Series.Add(series8);
             this.grOrdenado.Size = new System.Drawing.Size(547, 234);
             this.grOrdenado.TabIndex = 23;
             this.grOrdenado.Text = "chart2";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(125, 501);
+            this.button1.Location = new System.Drawing.Point(235, 39);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 24;
@@ -373,14 +378,48 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.SteelBlue;
+            this.groupBox1.Location = new System.Drawing.Point(12, 464);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(346, 121);
+            this.groupBox1.TabIndex = 25;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Resultados";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(235, 77);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 25;
+            this.button2.Text = "limpiar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 504);
+            this.label1.Location = new System.Drawing.Point(67, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 16);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "limpiar grilla";
+            this.label1.Size = new System.Drawing.Size(99, 20);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "limpiar gilla";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(67, 77);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(126, 20);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "limpiar graficos";
             // 
             // Form1
             // 
@@ -388,8 +427,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1623, 597);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grOrdenado);
             this.Controls.Add(this.grDesordenado);
             this.Controls.Add(this.lblGraficoOrdenado);
@@ -413,6 +451,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grDesordenado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grOrdenado)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -444,7 +484,10 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart grOrdenado;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

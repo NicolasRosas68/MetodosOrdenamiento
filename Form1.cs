@@ -75,6 +75,7 @@ namespace MetodosOrdenamiento
             }
 
             time.Stop();
+          
             tiempo = time.Elapsed.TotalMilliseconds;
            
         }
@@ -204,7 +205,7 @@ namespace MetodosOrdenamiento
                 txtIteraciones.Text = iteraciones.ToString();
                 txtTiempo.Text = time.ToString();
                 iteraciones = 0;
-
+                GraficoOrdenado(grOrdenado,numeros);
             }
             if (optQuick.Checked == true && numericUpDown1.Value >= 1)
             {
@@ -217,6 +218,7 @@ namespace MetodosOrdenamiento
                 dgvMetodos.Rows.Add("Quick Sort", iteraciones, tiempo, numericUpDown1.Value);
                 txtIteraciones.Text = iteraciones.ToString();
                 txtTiempo.Text = tiempo.ToString();
+                GraficoOrdenado(grOrdenado, sortedArr);
 
             }
             if (optMerge.Checked == true && numericUpDown1.Value >= 1)
@@ -229,9 +231,9 @@ namespace MetodosOrdenamiento
                 txtIteraciones.Text = iteraciones.ToString();
                 txtTiempo.Text = tiempo.ToString();
                 dgvMetodos.Rows.Add("Merge Sort", iteraciones, tiempo, numericUpDown1.Value);
-
+                GraficoOrdenado(grOrdenado, numeros);
             }
-            GraficoOrdenado(grOrdenado, sortedArr);
+           
         }
                                                          // GRAFICOS //
 
@@ -258,16 +260,46 @@ namespace MetodosOrdenamiento
                 chart.Series["Ordenado"].Points.AddXY(i, data[i]);
             }
         }
-                                                         //LIMPIAR GRILLA//
+                                                         //LIMPIAR GRILLA  Y GRAFICOS//
         private void button1_Click(object sender, EventArgs e)
         {
             dgvMetodos.Rows.Clear();
+        }
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            grOrdenado.Series.Clear();
+           
         }
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
         private void txtVector_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvMetodos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
